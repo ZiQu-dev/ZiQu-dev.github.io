@@ -1,0 +1,417 @@
+body {
+    background-color: black;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  @keyframes blink{
+    0% {
+      opacity: 1;
+    }
+  
+    39% {
+      opacity: 1;
+    }
+  
+    40% {
+      opacity: 0;
+    }
+  
+    41% {
+      opacity: 1;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .blink {
+    animation: blink infinite 20s;
+    animation-delay: 1100ms;
+  }
+  
+  @keyframes blinkingfade {
+    0% {
+      opacity: 0;
+    }
+  
+    50% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .container {
+    display: absolute;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    width: 100%;
+    height: 99%;
+    z-index: 10;
+  }
+  
+  .blinkfade {
+    animation-name: blinkingfade;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+  }
+  
+  @keyframes close {
+    0% {
+      d: path("M500 500C387.561 500 250 500 150 500C250 500 387.561 500 500 500C610.021 500 755.911 500 850 500C755.911 500 610.021 500 500 500Z")
+    }
+  
+    50% {
+      d: path("M500 500C387.561 500 250 500 150 500C250 500 387.561 500 500 500C610.021 500 755.911 500 850 500C755.911 500 610.021 500 500 500Z")
+    }
+  
+    100% {
+      d: path("M500 400C387.561 400 250 500 150 500C250 500 387.561 600 500 600C610.021 600 755.911 500 850 500C755.911 500 610.021 400 500 400Z")
+    }
+  }
+  
+  @keyframes close-d {
+    0% {
+      d: path("M500 400C387.561 400 250 500 150 500C250 500 387.561 600 500 600C610.021 600 755.911 500 850 500C755.911 500 610.021 400 500 400Z")
+    }
+  
+    39% {
+      d: path("M500 400C387.561 400 250 500 150 500C250 500 387.561 600 500 600C610.021 600 755.911 500 850 500C755.911 500 610.021 400 500 400Z")
+    }
+  
+    40% {
+      d: path("M500 500C387.561 500 250 500 150 500C250 500 387.561 500 500 500C610.021 500 755.911 500 850 500C755.911 500 610.021 500 500 500Z")
+    }
+  
+    41% {
+      d: path("M500 400C387.561 400 250 500 150 500C250 500 387.561 600 500 600C610.021 600 755.911 500 850 500C755.911 500 610.021 400 500 400Z")
+    }
+  
+    100% {
+      d: path("M500 400C387.561 400 250 500 150 500C250 500 387.561 600 500 600C610.021 600 755.911 500 850 500C755.911 500 610.021 400 500 400Z")
+    }
+  }
+  
+  @keyframes closeu {
+    0% {
+      d: path("M500 500L850 500L500 400L150 500L500 500Z")
+    }
+  
+    50% {
+      d: path("M500 500L850 500L500 400L150 500L500 500Z")
+    }
+  
+    100% {
+      d: path("M500 400L850 500L500 400L150 500L500 400Z")
+    }
+  }
+  
+  @keyframes closeu-d {
+    0% {
+      d: path("M500 400L850 500L500 400L150 500L500 400Z")
+    }
+  
+    39% {
+      d: path("M500 400L850 500L500 400L150 500L500 400Z")
+    }
+  
+    40% {
+      d: path("M500 500L850 500L500 400L150 500L500 500Z")
+    }
+  
+    41% {
+      d: path("M500 400L850 500L500 400L150 500L500 400Z")
+    }
+  
+    100% {
+      d: path("M500 400L850 500L500 400L150 500L500 400Z")
+    }
+  }
+  
+  @keyframes closed {
+    0% {
+      d: path("M500 500L850 500L500 600L150 500L500 500Z")
+    }
+  
+    50% {
+      d: path("M500 500L850 500L500 600L150 500L500 500Z")
+    }
+  
+    100% {
+      d: path("M500 600L850 500L500 600L150 500L500 600Z")
+    }
+  }
+  
+  @keyframes closed-d {
+    0% {
+      d: path("M500 600L850 500L500 600L150 500L500 600Z")
+    }
+  
+    39% {
+      d: path("M500 600L850 500L500 600L150 500L500 600Z")
+    }
+  
+    40% {
+      d: path("M500 500L850 500L500 600L150 500L500 500Z")
+    }
+  
+    41% {
+      d: path("M500 600L850 500L500 600L150 500L500 600Z")
+    }
+  
+    100% {
+      d: path("M500 600L850 500L500 600L150 500L500 600Z")
+    }
+  }
+  
+  #lid {
+    animation-name: close;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+  }
+  
+  #upperlid {
+    animation-name: closeu;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+  }
+  
+  #downlid {
+    animation-name: closed;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+  }
+  
+  /* ---- particles.js container ---- */
+  
+  #particles-js {
+    position: absolute;
+    z-index: -99;
+    width: 100%;
+    height: 99%;
+  }
+  
+  @keyframes lookup {
+    0% {
+      transform: translate(0, 0);
+    }
+  
+    10%, 30% {
+      transform: translate(0, -3%);
+    }
+  
+    40%, 60% {
+      transform: translate(-3%, 3%);
+    }
+  
+    70%, 90% {
+      transform: translate(3%, 3%);
+    }
+  
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+  
+  @keyframes svg-text-anim {
+    0% {
+      fill: transparent;
+    }
+  
+    20% {
+      stroke-dashoffset: 0;
+      fill: transparent;
+    }
+  
+    83% {
+      stroke-dashoffset: 0;
+      fill: transparent;
+    }
+  
+    84% {
+      stroke-dashoffset: 0;
+      fill: #ffffff;
+    }
+  
+    100% {
+      stroke-dashoffset: 0;
+      fill: #ffffff;
+    }
+  }
+  
+  .box {
+    border: 2px solid white;
+    height: 400px;
+    width: 400px;
+    position: absolute;
+  }
+  
+  .pupil {
+    animation: lookup 6s;
+    animation-iteration-count: 1;
+    animation-delay: 1s;
+    transform: translate(0, 0);
+  }
+  
+  #curve .svg-elem-1 {
+    stroke-dashoffset: 3531.0419921875px;
+    stroke-dasharray: 3531.0419921875px;
+    fill: transparent;
+    transition: stroke-dashoffset 1s ease-in-out 0s, fill 0.7s ease-in-out 0.8s;
+  }
+  
+  @keyframes orange-2-an {
+    0% {
+      fill: transparent;
+    }
+  
+    90% {
+      fill: transparent;
+    }
+  
+    95% {
+      fill: rgb(253, 124, 15);
+    }
+  
+    100% {
+      fill: rgb(253, 124, 15);
+    }
+  }
+  
+  #curve.active .svg-elem-1 {
+    stroke-dashoffset: 0;
+    animation: forwards orange-2-an 5100ms;
+    fill: rgb(253, 124, 15);
+  }
+  
+  #curve .svg-elem-2 {
+    stroke-dashoffset: 3095.810302734375px;
+    stroke-dasharray: 3095.810302734375px;
+    fill: transparent;
+    transition: stroke-dashoffset 1s ease-in-out 0.12s, fill 0.7s ease-in-out 0.9s;
+  }
+  
+  @keyframes black-an {
+    0% {
+      fill: transparent;
+    }
+  
+    90% {
+      fill: transparent;
+    }
+  
+    95% {
+      fill: rgb(0, 0, 0);
+    }
+  
+    100% {
+      fill: rgb(0, 0, 0);
+    }
+  }
+  
+  #curve.active .svg-elem-2 {
+    stroke-dashoffset: 0;
+    animation: forwards black-an 5100ms;
+    fill: rgb(0, 0, 0);
+  }
+  
+  #blender .svg-elem-1 {
+    stroke-dashoffset: 1273.3648681640625px;
+    stroke-dasharray: 1273.3648681640625px;
+    fill: transparent;
+    transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0s,
+                    fill 0.5s cubic-bezier(0.47, 0, 0.745, 0.715) 0.8s;
+  }
+  
+  @keyframes white-an {
+    0% {
+      fill: transparent;
+    }
+  
+    90% {
+      fill: transparent;
+    }
+  
+    95% {
+      fill: rgb(255, 255, 255);
+    }
+  
+    100% {
+      fill: rgb(255, 255, 255);
+    }
+  }
+  
+  #blender.active .svg-elem-1 {
+    animation: forwards white-an 6700ms;
+    stroke-dashoffset: 0;
+    fill: rgb(255, 255, 255);
+  }
+  
+  #blender .svg-elem-2 {
+    stroke-dashoffset: 812.50439453125px;
+    stroke-dasharray: 812.50439453125px;
+    fill: transparent;
+    transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.12s,
+                    fill 0.5s cubic-bezier(0.47, 0, 0.745, 0.715) 0.9s;
+  }
+  
+  @keyframes blue-an {
+    0% {
+      fill: transparent;
+    }
+  
+    90% {
+      fill: transparent;
+    }
+  
+    95% {
+      fill: rgb(38, 87, 135);
+    }
+  
+    100% {
+      fill: rgb(38, 87, 135);
+    }
+  }
+  
+  #blender.active .svg-elem-2 {
+    animation: forwards blue-an 6700ms;
+    stroke-dashoffset: 0;
+    fill: rgb(38, 87, 135);
+  }
+  
+  #blender .svg-elem-3 {
+    stroke-dashoffset: 5026.55078125px;
+    stroke-dasharray: 5026.55078125px;
+    fill: transparent;
+    transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.24s,
+                    fill 0.5s cubic-bezier(0.47, 0, 0.745, 0.715) 1s;
+  }
+  
+  @keyframes orange-an {
+    0% {
+      fill: transparent;
+    }
+  
+    90% {
+      fill: transparent;
+    }
+  
+    95% {
+      fill: rgb(234, 118, 0);
+    }
+  
+    100% {
+      fill: rgb(234, 118, 0);
+    }
+  }
+  
+  #blender.active .svg-elem-3 {
+    animation: forwards orange-an 6700ms;
+    stroke-dashoffset: 0;
+    fill: rgb(234, 118, 0);
+  }  
