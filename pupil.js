@@ -47,8 +47,6 @@ let handleMouseMove = function (event) {
 
   pupil.style.transform = 'translate(' + output.x.current/15 + '%, ' + output.y.current/45 + '%)';
 
-
-  console.log('output.x.current', output.x.current);
 };
 
 let handleResize = function () {
