@@ -2,7 +2,7 @@ function move() {
 
 let pupil = document.querySelector('.pupil');
 //  transition: translate all 500ms;
-pupil.style.transition = 'transform 1s ease-out';
+pupil.style.transition = 'transform 2s cubic-bezier(0, 0, 0.15, 1.5)';
 
 
 let input = {
